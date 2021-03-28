@@ -1,0 +1,186 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	line-height: 1.7;
+	font-family: 'Roboto';
+	background-color: #fafafa;
+}
+
+.findercontent {
+	margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-right: 3%;
+    margin-left: 3%;
+    background-color: #f2f2f2;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.finder {
+	position: fixed;
+	top: -50px;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	height: 50px;
+	background: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	border-bottom: 1px solid #e5e5e5;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	padding: 5px;
+	transition: top 0.15s ease-out;
+}
+
+.finder.active {
+	opacity: 0.8;
+	top: 0;
+}
+
+.finder-search-text {
+	display: block;
+	position: absolute;
+	height: 30px;
+    margin-left: 22%;
+    margin-top: 2.5%;
+    color: gray;
+}
+
+.finder-search-icon {
+	display: block;
+	margin-top: 1.3%;
+    margin-left: 14%;
+	position: absolute;
+	width: 30px;
+    background-image: url(search.png);
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+.finder-logo {
+	position: absolute;
+	width: 30px;
+    margin-top: 1%;
+    margin-left: 5%;
+    background-image: url(icon.png);
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+.finder-input {
+	margin-top: 1%;
+	background-color: #f2f2f2;
+	margin-left: 15%;
+	flex-grow: 1;
+	width: 40%;
+	height: 30px;
+	border: none;
+	padding: 8px;
+	outline: none !important;
+}
+
+.finder-input.not-found {
+	color: #e7353f;
+}
+
+.close-btn-finder {
+    position: absolute;
+    right: 6%;
+	background: none;
+	border: none;
+	width: 20px;
+	height: 40px;
+	text-align: center;
+	padding: 0;
+	outline: none !important;
+}
+
+.btn-finder {
+	display: none;
+	background: none;
+	border: none;
+	width: 20px;
+	height: 40px;
+	text-align: center;
+	padding: 0;
+	outline: none !important;
+}
+
+.finder-input,
+.btn-finder:not(:last-child) {
+	margin-right: 5px;
+}
+
+.finder-count {
+	/* display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex; */
+	/* display: flex; */
+	flex-direction: column;
+	justify-content: center;
+	color: #888;
+	border-right: 1px solid #e5e5e5;
+	margin-right: 5px;
+	padding-right: 5px;
+	white-space: nowrap;
+}
+
+.btn-finder,
+.finder-count {
+	flex-shrink: 0;
+	flex-grow: 0;
+}
+
+.highlight {
+	background: #ff8;
+}
+
+.highlight.active {
+	background: #ffd71b;
+}
+
+
+ul > li{margin-right:25px;font-weight:lighter;cursor:pointer}
+li.active{border-bottom:3px solid silver;}
+
+.item-photo{display:flex;justify-content:center;align-items:center;border-right:1px solid #f6f6f6;}
+.menu-items{list-style-type:none;font-size:11px;display:inline-flex;margin-bottom:0;margin-top:20px}
+.btn-success{width:100%;border-radius:0;}
+.section{width:100%;margin-left:-15px;padding:2px;padding-left:15px;padding-right:15px;background:#f8f9f9}
+.title-price{margin-top:30px;margin-bottom:0;color:black}
+.title-attr{margin-top:0;margin-bottom:0;color:black;}
+.btn-minus{cursor:pointer;font-size:7px;display:flex;align-items:center;padding:5px;padding-left:10px;padding-right:10px;border:1px solid gray;border-radius:2px;border-right:0;}
+.btn-plus{cursor:pointer;font-size:7px;display:flex;align-items:center;padding:5px;padding-left:10px;padding-right:10px;border:1px solid gray;border-radius:2px;border-left:0;}
+div.section > div {width:100%;display:inline-flex;}
+div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-right:5px;max-width:18%;text-align:center;}
+.attr,.attr2{cursor:pointer;margin-right:5px;height:20px;font-size:10px;padding:2px;border:1px solid gray;border-radius:2px;}
+.attr.active,.attr2.active{ border:1px solid orange;}
+
+@media (max-width: 426px) {
+    .container {margin-top:0px !important;}
+    .container > .row{padding:0 !important;}
+    .container > .row > .col-xs-12.col-sm-5{
+        padding-right:0 ;
+    }
+    .container > .row > .col-xs-12.col-sm-9 > div > p{
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+    .container > .row > .col-xs-12.col-sm-9 > div > ul{
+        padding-left:10px !important;
+
+    }
+    .section{width:104%;}
+    .menu-items{padding-left:0;}
+}
