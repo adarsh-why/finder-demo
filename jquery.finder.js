@@ -1,6 +1,7 @@
 $(document).ready(function () {
 	$(finder.activator).click(function() {
 		finder.activate();
+		$('.btn-finder').hide()
 	});
 
 	$(document).mousedown(function (event) {
