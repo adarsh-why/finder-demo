@@ -236,6 +236,5 @@ const finder = {
 }
 
 function hideElem() {
-	$('.finder-search-icon').hide();
 	$('.finder-search-text').hide();
 }
