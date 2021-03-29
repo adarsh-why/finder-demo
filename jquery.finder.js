@@ -64,7 +64,7 @@ const finder = {
 				'type': 'div',
 				'class': 'finder-logo',
 			})
-			.appendTo(finderElemContent);
+			.appendTo(finderElem);
 
 		const searchIcon = $('<div />')
 			.attr({
